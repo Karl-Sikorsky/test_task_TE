@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TE_test_task</string>
+    <string name="update_transactions">update transactions</string>
+    <string name="sum_in_gold">ALL SUM IN GOLD CURRENCY =</string>
 </resources>

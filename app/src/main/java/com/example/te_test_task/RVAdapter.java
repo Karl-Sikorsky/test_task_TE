@@ -13,7 +13,8 @@ import com.example.te_test_task.pojo.TransactionsResponse;
 import java.util.List;
 
 public class RVAdapter extends RecyclerView.Adapter<RVAdapter.TransactionViewHolder> {
-MerchView mMerchView;
+    MerchView mMerchView;
+
     public static class TransactionViewHolder extends RecyclerView.ViewHolder {
 
         TextView merchSku;
@@ -52,15 +53,15 @@ MerchView mMerchView;
 
     @Override
     public void onBindViewHolder(TransactionViewHolder transactionViewHolder, final int position) {
-        transactionViewHolder.merchSku.setText("Sku: "+transactionsResponses.get(position).getSku());
-        transactionViewHolder.merchAmount.setText("Amount: "+transactionsResponses.get(position).getAmount());
-        transactionViewHolder.merchCurrency.setText("Currency: "+transactionsResponses.get(position).getCurrency());
+        transactionViewHolder.merchSku.setText("Sku: " + transactionsResponses.get(position).getSku());
+        transactionViewHolder.merchAmount.setText("Amount: " + transactionsResponses.get(position).getAmount());
+        transactionViewHolder.merchCurrency.setText("Currency: " + transactionsResponses.get(position).getCurrency());
 
 
         transactionViewHolder.cardLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              mMerchView.showCurrentProduct(transactionsResponses.get(position).getSku());
+                mMerchView.showCurrentProduct(transactionsResponses.get(position).getSku());
             }
 
         });
